@@ -9,7 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var textFieldAge: UITextField!
+    @IBOutlet weak var labelAge: UILabel!
 
+    @IBAction func btnSubmitTapped(_ sender: Any) {
+        labelAge.text = String(getAgeInCatYears(age: Int(textFieldAge.text!)!))
+    }
+    
+    func getAgeInCatYears(age : Int) -> Int {
+        let format = 7
+        
+        return age * format
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

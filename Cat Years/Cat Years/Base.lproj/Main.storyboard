@@ -46,6 +46,9 @@
                                 <rect key="frame" x="162" y="232" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="btnSubmitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6QK-Gx-iFg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="In cat years your cat is :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuA-z9-ESh">
                                 <rect key="frame" x="57" y="286" width="261" height="21"/>
@@ -68,6 +71,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="labelAge" destination="mqh-Vf-NHN" id="Osy-im-dIX"/>
+                        <outlet property="textFieldAge" destination="Mqn-FP-1nQ" id="TjI-lX-JUj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
