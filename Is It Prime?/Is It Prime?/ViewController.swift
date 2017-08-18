@@ -13,6 +13,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelAnswer: UILabel!
 
     @IBAction func btnTapped(_ sender: Any) {
+        if let empty = textFieldNumber.text {
+            
+            if let number = Int(empty) {
+                
+                if isPrime(number: number) {
+                    labelAnswer.text = String(number) + " It's prime"
+                
+                } else {
+                    labelAnswer.text = String(number) + " is not prime"
+                
+                }
+            
+            } else {
+                labelAnswer.text = "Enter a positive whole number"
+            
+            }
+        
+        } else {
+            labelAnswer.text = "Enter a whole number"
+        
+        }
+        
     }
     
     private func isPrime(number : Int) -> Bool {
