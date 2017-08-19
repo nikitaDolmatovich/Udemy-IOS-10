@@ -55,7 +55,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="t3b-a9-H8v"/>
-                                    <barButtonItem title="-10" id="blb-M7-zyc">
+                                    <barButtonItem title="+10" id="blb-M7-zyc">
                                         <connections>
                                             <action selector="btnPlusPressed:" destination="BYZ-38-t0r" id="GtH-Au-zqL"/>
                                         </connections>

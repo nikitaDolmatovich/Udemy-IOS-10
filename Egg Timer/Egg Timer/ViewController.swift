@@ -13,18 +13,34 @@ class ViewController: UIViewController {
     var timer = Timer()
 
     @IBAction func btnPlayPressed(_ sender: Any) {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.decreaseValue), userInfo: nil, repeats: true)
     }
     
     @IBAction func btnPausePressed(_ sender: Any) {
+        timer.invalidate()
     }
     
     @IBAction func btnMinusPressed(_ sender: Any) {
+        var value = getValue()
+        
+        if value > 10 {
+            value -= 10
+            labelValue.text = String(value)
+        }
     }
     
     @IBAction func btnPlusPressed(_ sender: Any) {
+        var value = getValue()
+        
+        if value < 210  && value < 200 {
+            value += 10
+            labelValue.text = String(value)
+        }
     }
     
     @IBAction func btnResetPressed(_ sender: Any) {
+        let startValue = 210
+        labelValue.text = String(startValue)
     }
     
     func getValue() -> Int {
@@ -32,9 +48,19 @@ class ViewController: UIViewController {
         return Int(labelValue.text!)!
     }
     
+    func decreaseValue() {
+        var value = getValue()
+        
+        if value > 0 {
+            value -= 1
+            labelValue.text = String(value)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.decreaseValue), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
