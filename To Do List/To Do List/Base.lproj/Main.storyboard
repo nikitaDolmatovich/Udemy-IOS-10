@@ -50,6 +50,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="To Do List" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="table" destination="5GW-vk-jQ3" id="fGy-Y8-864"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

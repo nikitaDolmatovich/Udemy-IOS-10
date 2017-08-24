@@ -9,17 +9,28 @@
 import UIKit
 
 class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    private var item = Item()
+    private var items = Array<String>()
+    @IBOutlet weak var table: UITableView!
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-        return 0
+        return item.getCount()
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
+        items = item.getItems()
+        cell.textLabel?.text = items[indexPath.row]
         
         return cell
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        items = item.getItems()
+        table.reloadData()
     }
     
     override func viewDidLoad() {
