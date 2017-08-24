@@ -12,6 +12,10 @@ class Item {
 
     private var items = [String]()
     
+    init() {
+        items = readData()
+    }
+    
     public func addItem(item: String) {
     
         items.append(item)
@@ -31,6 +35,17 @@ class Item {
     public func getCount() -> Int {
     
         return items.count
+    }
+    
+    public func getItems() -> Array<String> {
+    
+        items = readData()
+        return items
+    }
+    
+    private func readData() -> Array<String> {
+    
+        return UserDefaults.standard.object(forKey: "items") as! Array<String>
     }
     
     private func getIndexItem(item: String) -> Int {
