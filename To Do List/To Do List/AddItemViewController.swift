@@ -8,8 +8,35 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class AddItemViewController: UIViewController {
+    
+    @IBOutlet weak var textFieldItem: UITextField!
+    private var items = [String]()
 
+    @IBAction func btnAddTapped(_ sender: Any) {
+        
+    }
+    
+    func addItem(item: String) {
+        
+        if let itemObject = textFieldItem.text {
+            
+            items.append(itemObject)
+            saveItem()
+            
+        } else {
+        
+            textFieldItem.placeholder = "Enter item"
+        
+        }
+    
+    }
+    
+    private func saveItem() {
+        
+        UserDefaults.standard.set(items, forKey: "items")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
