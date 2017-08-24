@@ -13,6 +13,7 @@
 		117EE45E1F4ED22D00543A4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117EE45C1F4ED22D00543A4F /* Main.storyboard */; };
 		117EE4601F4ED22D00543A4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117EE45F1F4ED22D00543A4F /* Assets.xcassets */; };
 		117EE4631F4ED22D00543A4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117EE4611F4ED22D00543A4F /* LaunchScreen.storyboard */; };
+		117EE46B1F4ED60300543A4F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117EE46A1F4ED60300543A4F /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		117EE45F1F4ED22D00543A4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		117EE4621F4ED22D00543A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		117EE4641F4ED22D00543A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		117EE46A1F4ED60300543A4F /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				117EE4581F4ED22D00543A4F /* FirstViewController.swift */,
 				117EE45A1F4ED22D00543A4F /* SecondViewController.swift */,
 				117EE45C1F4ED22D00543A4F /* Main.storyboard */,
+				117EE46A1F4ED60300543A4F /* Item.swift */,
 				117EE45F1F4ED22D00543A4F /* Assets.xcassets */,
 				117EE4611F4ED22D00543A4F /* LaunchScreen.storyboard */,
 				117EE4641F4ED22D00543A4F /* Info.plist */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117EE46B1F4ED60300543A4F /* Item.swift in Sources */,
 				117EE45B1F4ED22D00543A4F /* SecondViewController.swift in Sources */,
 				117EE4571F4ED22D00543A4F /* AppDelegate.swift in Sources */,
 				117EE4591F4ED22D00543A4F /* FirstViewController.swift in Sources */,
