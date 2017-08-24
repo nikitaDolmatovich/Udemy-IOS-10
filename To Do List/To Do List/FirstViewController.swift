@@ -33,6 +33,15 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         table.reloadData()
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.delete {
+        
+            item.deleteItem(index: indexPath.row)
+            table.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
