@@ -28,6 +28,11 @@ class Item {
     
     }
     
+    public func getCount() -> Int {
+    
+        return items.count
+    }
+    
     private func getIndexItem(item: String) -> Int {
     
         var index = 0
